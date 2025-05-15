@@ -1,0 +1,27 @@
+server:
+  port: 3001
+
+spring:
+  freemarker:
+    cache: false
+  profiles:
+    active: local
+  config:
+    import:
+      - optional:classpath:application-url.yml
+
+---
+# local
+
+---
+# dev
+
+---
+# prod
+
+---
+# Etc
+spring:
+  output:
+    ansi:
+      enabled: always   # console 모드별 색상 변환

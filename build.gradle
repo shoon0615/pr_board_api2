@@ -1,0 +1,62 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.1'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+allprojects {
+	group = 'com.side_project'
+	version = '0.0.1-SNAPSHOT'
+
+	// sourceCompatibility -> toolchain 방식으로 변경됨
+//	sourceCompatibility = '17'
+	java {
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(19)
+		}
+	}
+
+	repositories {
+		mavenCentral()
+	}
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'java-library'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+
+	configurations {
+		compileOnly {
+			extendsFrom annotationProcessor
+		}
+	}
+
+	test {
+		useJUnitPlatform()
+
+		// TDD 는 실패 결과만 출력하는데, 모든 결과 출력 설정
+		/*testLogging {
+			events "passed", "skipped", "failed"
+		}*/
+	}
+
+	dependencies {
+		implementation 'org.springframework.boot:spring-boot-starter-web'
+		developmentOnly 'org.springframework.boot:spring-boot-devtools'
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+		/* Lombok */
+		compileOnly 'org.projectlombok:lombok'
+		annotationProcessor 'org.projectlombok:lombok'
+		testCompileOnly 'org.projectlombok:lombok'
+		testAnnotationProcessor 'org.projectlombok:lombok'
+
+		/* Junit(Test) */
+		testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	}
+}
+
+
+

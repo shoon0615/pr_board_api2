@@ -1,0 +1,13 @@
+tasks.bootJar.enabled = false
+tasks.jar.enabled = true
+
+dependencies {
+    implementation project(':crud-common')
+    implementation project(':crud-domain')
+
+    /* Security */
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    /* JPA */
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+}

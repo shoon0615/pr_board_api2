@@ -1,0 +1,56 @@
+# spring.application.name=side-project
+
+server:
+  port: 8091
+
+spring:
+  freemarker:
+    cache: false
+  profiles:
+    active: local
+
+---
+# local
+
+---
+# dev
+
+---
+# prod
+
+---
+# Swagger
+springdoc:
+#  default-consumes-media-type: application/json;charset=UTF-8
+#  default-produces-media-type: application/json;charset=UTF-8
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  show-actuator: true
+  writer-with-default-pretty-printer: true
+  swagger-ui:
+    tags-sorter: alpha
+#    operations-sorter: method
+    writer-with-order-by-keys: true
+#    path: /swagger-ui/index.html    # 임의로 Swagger url 변경 가능(default: http://localhost:8091/swagger-ui/index.html)
+
+---
+# Messages
+spring:
+  messages:
+    basename: messages/messages
+    encoding: UTF-8
+#    file-extension: yml    # 적용 안 됨 -> properties 만 지원
+
+---
+# Jwt
+jwt:
+  secret: 7Hs9x2mK4Lp6Rw3tYzAqBcDfGjNvXeUi
+  token-validity-in-seconds: 86400
+  refresh-token-validity-in-seconds: 172800
+
+---
+# Etc
+spring:
+  output:
+    ansi:
+      enabled: always   # console 모드별 색상 변환

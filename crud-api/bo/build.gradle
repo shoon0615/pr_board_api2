@@ -1,0 +1,30 @@
+tasks.bootJar.enabled = true
+tasks.jar.enabled = false
+
+dependencies {
+    implementation project(':crud-common')
+    implementation project(':crud-biz')
+    implementation project(':crud-domain')
+
+    /* Security */
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    /* Swagger */
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0'
+
+    /* AOP(=Aspect) */
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+
+    /* Validation */
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    /* JWT Token */
+//		implementation 'io.jsonwebtoken:jjwt-api'
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+
+    /* Redis */
+//		implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+}

@@ -1,0 +1,7 @@
+url:
+  bo:
+    api-url: http://localhost:8091
+    ui-url: http://localhost:8090
+  fo:
+    api-url: http://localhost:3001
+    ui-url: http://localhost:3000

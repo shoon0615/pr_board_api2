@@ -1,0 +1,12 @@
+rootProject.name = 'side-project'
+include 'crud-api:bo'
+findProject(':crud-api:bo')?.name = 'bo'
+include 'crud-api:fo'
+findProject(':crud-api:fo')?.name = 'fo'
+include 'crud-batch'
+include 'crud-biz'
+include 'crud-common'
+include 'crud-domain'
+include 'crud-infra'
+include 'crud-ui'
+
