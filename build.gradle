@@ -58,5 +58,14 @@ subprojects {
 	}
 }
 
+// 모든 서비스를 하나의 build.gradle 에서 관리 -> 각 서비스에서 각 build.gradle 에서 관리
+/*project(':crud-batch') {
+	bootJar { enabled = false }
+	jar { enabled = true }
 
+	dependencies {
+		implementation project(':crud-common')
+		implementation 'org.springframework.boot:spring-boot-starter-batch'
+	}
+}*/
 

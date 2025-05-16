@@ -20,6 +20,7 @@
 
 ### 🖥️ Tip
 - **IntelliJ** : <a href="https://github.com/shoon0615/side-project/blob/master/README/IntelliJ.md">상세보기</a>
+- **README** : <a href="https://github.com/shoon0615/side-project/tree/master/README">상세보기</a>
 
 ### ⭐️ 추가 기능(기본)
 - `QueryDSL` 적용
