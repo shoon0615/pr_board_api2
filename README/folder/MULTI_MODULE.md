@@ -198,7 +198,7 @@
   어느 쪽이 더 비효율적인지 판단이 안됨.. (해당 로직 미사용 시, Service 작업 복잡도가 올라갈 수 있음)  
   이미 Projections 으로 정리를 마친 상태라 일단 기존 상태 유지하고, 추후 판단이 필요해보임..
   > `api` `biz` 둘 다 domain 의존성 주입, `domain` Request, Entity, Response 보관
-2. `Security` SRP 위반
+2. `Security` `jwtUtil` SRP 위반
     1. `api` Security Filter
     2. `biz` UserDetailsService
     3. `domain` UserDetails Entity

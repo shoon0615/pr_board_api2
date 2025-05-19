@@ -31,6 +31,7 @@ public final class ObjectMapperUtil {
 //        mapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);        // 직렬화 시 null 이나 빈 값 포함 안함
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);  // 매칭되지 않는 변수가 있어도 에러 무시
         mapper.enable(SerializationFeature.INDENT_OUTPUT);                      // 콘솔에 출력 시 가독성있게 JSON 포맷팅
+        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);         // 날짜를 문자열로 직렬화
     }
 
     /**

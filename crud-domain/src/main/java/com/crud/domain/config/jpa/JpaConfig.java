@@ -13,6 +13,7 @@ package com.crud.domain.config.jpa;
 
 import com.crud.domain.DomainPackageLocation;
 import com.crud.domain.domains.repository.JpaPackageLocation;
+import com.querydsl.jpa.JPQLTemplates;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -40,9 +41,10 @@ public class JpaConfig {
      * @date         : 2025-01-09 AM 1:26
      */
     @Bean
+//    @Primary
 //    @ConditionalOnMissingBean       // Bean 등록 중복 방지
     public JPAQueryFactory jpaQueryFactory() {
-        return new JPAQueryFactory(entityManager);
+        return new JPAQueryFactory(JPQLTemplates.DEFAULT, entityManager);
     }
 
     /**

@@ -60,9 +60,16 @@ spring:
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:~/crud3
-    #    url: jdbc:h2:tcp://localhost/~/crud;AUTO_SERVER=true
+#    url: jdbc:h2:tcp://localhost/~/crud;AUTO_SERVER=true
     username: sa
     password:
+
+  # MySQL 설정
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://158.179.167.148:3306/side_project_db?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+#    username: root
+#    password: side_project@1234
 
   # 환경변수 설정
 #  datasource:

@@ -22,7 +22,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public abstract class PageCondition {
 
-    //    @Min(value = 1, message = "페이지는 1 이상이어야 합니다.")
+//    @Min(value = 1, message = "페이지는 1 이상이어야 합니다.")
 //    private int page;     // @NonNull
     private Integer page;
 
@@ -35,6 +35,10 @@ public abstract class PageCondition {
 
     @JsonIgnore
     private int size = 10;
+
+//    PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "id"));
+    /*@JsonIgnore
+    private Sort sort = Sort.by(Sort.Direction.DESC, "id");*/
 
     // TODO: 검색어 -> Inner Class?? || SearchCondition extends SearchWord extends PageCondition??
 //    private Map<String, String> searchCondition;

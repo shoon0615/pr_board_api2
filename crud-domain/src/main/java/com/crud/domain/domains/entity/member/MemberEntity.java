@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-@ToString(callSuper = true)
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Comment("회원")

@@ -51,6 +51,7 @@ public class AuthConstants {
                     , "/docs"
 //                    , "/error"
                     , "/api/v1/crud/**"
+                    , "/api/v1/board/**"
             );
 
             List<String> combinedList = new ArrayList<>(LOGIN.getList());

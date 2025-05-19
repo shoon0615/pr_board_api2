@@ -10,6 +10,9 @@ dependencies {
     /* H2 DataBase */
     runtimeOnly 'com.h2database:h2'
 
+    /* MySQL DataBase */
+//    runtimeOnly 'com.mysql:mysql-connector-j'
+
     /* Query Log 물음표 변환 */
     implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
 

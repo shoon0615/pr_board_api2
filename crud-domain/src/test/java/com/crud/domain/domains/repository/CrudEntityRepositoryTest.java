@@ -12,7 +12,6 @@
 package com.crud.domain.domains.repository;
 
 import com.crud.common.util.ObjectMapperUtil;
-import com.crud.domain.config.jpa.JpaConfig;
 import com.crud.domain.config.jpa.JpaConfigTest;
 import com.crud.domain.domains.dto.request.CrudRequest;
 import com.crud.domain.domains.entity.CrudEntity;
@@ -68,7 +67,7 @@ class CrudEntityRepositoryTest {
                 .extracting("title", "contents")
                 .contains(request.getTitle(), request.getContents());*/
 
-        String[] IGNORE_PROPERTIES = {"id", "deleteAt", "createdDate", "modifiedDate", "createdBy", "modifiedBy"};
+        String[] IGNORE_PROPERTIES = {"id", "deletedAt", "createdDate", "modifiedDate", "createdBy", "modifiedBy"};
         assertThat(response)
                 .usingRecursiveComparison()
                 .ignoringFields(IGNORE_PROPERTIES)

@@ -60,4 +60,8 @@ public class EmbMemberInfo {
     @Column(length = 4000)
     private String address2;
 
+    /*@JsonIgnoreProperties("member")
+    @OneToMany(mappedBy = "member")
+    private List<BoardEntity> board = new ArrayList<>();*/
+
 }

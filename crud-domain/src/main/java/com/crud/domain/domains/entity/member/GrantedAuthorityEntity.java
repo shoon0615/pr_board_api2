@@ -19,7 +19,6 @@ import org.hibernate.annotations.Comment;
 import org.springframework.security.core.GrantedAuthority;
 
 @Getter
-@ToString(callSuper = true)
 @Entity
 //@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor
