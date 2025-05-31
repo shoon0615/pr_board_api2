@@ -38,14 +38,18 @@ public class BoardResponse {
     /** 태그 목록 */
     private List<String> tags;
 
+    /** 댓글 수 */
+    private int reviews;
+
     @Builder
-    public BoardResponse(String title, String contents, int hits, String memberName, int likes, List<String> tags) {
+    public BoardResponse(String title, String contents, int hits, String memberName, int likes, List<String> tags, int reviews) {
         this.title = title;
         this.contents = contents;
         this.hits = hits;
         this.memberName = memberName;
         this.likes = likes;
         this.tags = tags;
+        this.reviews = reviews;
     }
 
     @Getter

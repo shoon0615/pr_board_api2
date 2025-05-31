@@ -36,6 +36,7 @@ import java.util.Optional;
 
 import static com.crud.domain.domains.entity.board.QBoardEntity.boardEntity;
 import static com.crud.domain.domains.entity.board.QBoardLikeEntity.boardLikeEntity;
+import static com.crud.domain.domains.entity.board.QBoardReviewEntity.boardReviewEntity;
 import static com.crud.domain.domains.entity.board.QBoardTagEntity.boardTagEntity;
 import static com.crud.domain.domains.entity.member.QMemberEntity.memberEntity;
 
@@ -171,6 +172,11 @@ public class BoardEntityRepositoryImpl implements QueryRepositoryExtension, Boar
 //                                        .groupBy(boardLikeEntity.board.id)
                         ).intValue()
                         , GroupBy.list(boardTagEntity.contents)
+                        , Expressions.asNumber(
+                                JPAExpressions.select(boardReviewEntity.count())
+                                        .from(boardReviewEntity)
+                                        .where(boardReviewEntity.board.id.eq(boardEntity.id))
+                        ).intValue()
                 )));
     }
 
